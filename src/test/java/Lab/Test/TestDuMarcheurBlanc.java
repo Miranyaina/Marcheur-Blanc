@@ -15,21 +15,28 @@ public class TestDuMarcheurBlanc {
     @BeforeEach
     public void setUp() {
         carte = new Carte();
-        Lieu numero1 = new Lieu("HEI");
-        Lieu numero2 = new Lieu("Pullman");
-        Lieu numero3 = new Lieu("Balançoire");
-        Lieu numero4 = new Lieu("ESTI");
+        Lieu numero1 = new Lieu("Marais");
+        Lieu numero2 = new Lieu("Sekolintsika");
+        Lieu numero3 = new Lieu("HEI");
+        Lieu numero4 = new Lieu("Pullman");
+        Lieu numero5 = new Lieu("Balançoire");
+        Lieu numero6 = new Lieu("ESTI");
 
         carte.ajouterLieu(numero1);
         carte.ajouterLieu(numero2);
         carte.ajouterLieu(numero3);
         carte.ajouterLieu(numero4);
+        carte.ajouterLieu(numero5);
+        carte.ajouterLieu(numero6);
 
+        carte.ajouterRue("Rue sans nom", "Marais", "Sekolintsika");
+        carte.ajouterRue("Rue sans nom", "Ny Sekolintsika", "HEI");
         carte.ajouterRue("Andriatsihoarana", "HEI", "Pullman");
         carte.ajouterRue("Ranaivo", "Pullman", "Balançoire");
         carte.ajouterRue("Rue sans nom", "Balançoire", "ESTI");
 
-        marcheurBlanc = new MarcheurBlanc("Bjarni", numero1);
+
+        marcheurBlanc = new MarcheurBlanc("Bjarni", numero3);
     }
 
     @Test
