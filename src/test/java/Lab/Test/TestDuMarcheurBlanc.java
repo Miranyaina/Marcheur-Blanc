@@ -20,7 +20,8 @@ public class TestDuMarcheurBlanc {
         Lieu numero3 = new Lieu("HEI");
         Lieu numero4 = new Lieu("Pullman");
         Lieu numero5 = new Lieu("Balançoire");
-        Lieu numero6 = new Lieu("ESTI");
+        Lieu numero6 = new Lieu("Boulevard de l'Europe");
+        Lieu numero7 = new Lieu("ESTI");
 
         carte.ajouterLieu(numero1);
         carte.ajouterLieu(numero2);
@@ -28,13 +29,14 @@ public class TestDuMarcheurBlanc {
         carte.ajouterLieu(numero4);
         carte.ajouterLieu(numero5);
         carte.ajouterLieu(numero6);
+        carte.ajouterLieu(numero7);
 
         carte.ajouterRue("Rue sans nom", "Marais", "Sekolintsika");
         carte.ajouterRue("Rue sans nom", "Ny Sekolintsika", "HEI");
         carte.ajouterRue("Andriatsihoarana", "HEI", "Pullman");
         carte.ajouterRue("Ranaivo", "Pullman", "Balançoire");
-        carte.ajouterRue("Rue sans nom", "Balançoire", "ESTI");
-
+        carte.ajouterRue("Rue sans nom", "Balançoire", "Boulevard de l'Europe");
+        carte.ajouterRue("Rue sans nom", "Boulevard de l'Europe", "ESTI");
 
         marcheurBlanc = new MarcheurBlanc("Bjarni", numero3);
     }
